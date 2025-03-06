@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Games</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+
+    <!-- Header with Centered Title & Back Button in Top-Right -->
+    <header class="browse-header">
+        <h1>Browse Games</h1>
+        <div class="back-to-store">
+            <a href="{% url 'index' %}" class="btn">← Back to Store</a>
+        </div>
+    </header>
+
+    <!-- Games List -->
+    <section class="games-list">
+        <div class="games">
+            <div class="game">
+                <a href="{% url 'elden-ring' %}">
+                    <img src="{% static 'images/elden-ring.jpg' %}" alt="Elden Ring">
+                </a>
+                <p>Elden Ring</p>
+            </div>                
+            <div class="game">
+                <a href="{% url 'dota-2' %}">
+                    <img src="{% static 'images/dota-2.jpg' %}" alt="Dota 2">
+                </a>
+                <p>Dota 2</p>
+            </div>
+            <div class="game">
+                <a href="{% url 'assassins-creed' %}">
+                    <img src="{% static 'images/assassins-creed.jpg' %}" alt="Assassin's Creed">
+                </a>
+                <p>Assassin's Creed</p>
+            </div>
+            <div class="game">
+                <a href="{% url 'god-of-war' %}">
+                    <img src="{% static 'images/god-of-war.jpg' %}" alt="God of War">
+                </a>
+                <p>God of War Ragnarök: Valhalla</p>
+            </div>       
+
+            <div class="game">
+                <a href="{% url 'the_witcher_3' %}">
+                    <img src="{% static 'images/the-witcher-3.jpg' %}" alt="The Witcher 3: Wild Hunt">
+                </a>
+                <p>The Witcher 3: Wild Hunt</p>
+            </div>
+
+            <div class="game">
+                <a href="{% url 'cyberpunk' %}">
+                    <img src="{% static 'images/cyberpunk.jpg' %}" alt="Cyberpunk 2077">
+                </a>
+                <p>Cyberpunk 2077</p>
+            </div>
+
+            <div class="game">
+                <a href="{% url 'red-dead-redemption' %}">
+                    <img src="{% static 'images/red-dead-redemption.jpg' %}" alt="Red Dead Redemption">
+                </a>
+                <p>Red Dead Redemption</p>
+            </div>
+
+            <div class="game">
+                <a href="{% url 'final_fantasy' %}">
+                    <img src="{% static 'images/final-fantasy.jpg' %}" alt="Final Fantasy VII Remake">
+                </a>
+                <p>Final Fantasy VII Remake</p>
+            </div>        
+        </div>
+    </section>
+
+</body>
+</html>

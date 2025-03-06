@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="{% static 'images/steam-logo.png' %}" alt="Steam Logo" width="150">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'index' %}">Store</a></li>
+                    <li><a href="{% url 'community' %}" class="btn" style="margin-right: 10px;">Community</a></li>
+                    <li><a href="{% url 'about' %}" class="btn">About</a></li>
+                    <li><a href="{% url 'profile' %}" class="btn">Profile</a></li>
+                </ul>
+                </nav>
+            </div>
+    </header>
+    <main class="container">
+        <section class="content">
+            <h1>About Us</h1>
+            <p>Welcome to our website! We are dedicated to providing the best services for our customers.</p>
+            <p>Our mission is to deliver quality and excellence in everything we do.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Your Website Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>

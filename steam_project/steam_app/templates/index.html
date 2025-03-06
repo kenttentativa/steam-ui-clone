@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam UI Clone</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script src="{% static 'script.js' %}" defer></script>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="{% static 'images/steam-logo.png' %}" alt="Steam Logo" width="150">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'index' %}">Store</a></li>
+                    <li><a href="{% url 'community' %}" class="btn">Community</a></li>
+                    <li><a href="{% url 'about' %}" class="btn">About</a></li>
+                    <li><a href="{% url 'profile' %}" class="btn">Profile</a></li>
+                </ul>
+            </nav>
+            <div class="login-btn">
+                <a href="{% url 'logout' %}"class="btn btn-primary">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Banner -->
+    <section class="banner">
+        <div class="container">
+            <h1>Welcome to Steam</h1>
+            <p>Your favorite games, all in one place.</p>
+            <a href="{% url 'browse-games' %}" class="btn btn-primary">Browse Games</a>
+        </div>
+    </section>
+
+    <!-- Featured Games -->
+    <section class="featured">
+        <div class="container">
+            <h2>Featured & Recommended</h2>
+            <div class="games">
+                <div class="game">
+                    <a href="{% url 'elden-ring' %}">
+                        <img src="{% static 'images/elden-ring.jpg' %}" alt="Elden Ring">
+                    </a>
+                    <p>Elden Ring</p>
+                </div>                
+                <div class="game">
+                    <a href="{% url 'dota-2' %}">
+                        <img src="{% static 'images/dota-2.jpg' %}" alt="Dota 2">
+                    </a>
+                    <p>Dota 2</p>
+                </div>
+                <div class="game">
+                    <a href="{% url 'assassins-creed' %}">
+                        <img src="{% static 'images/assassins-creed.jpg' %}" alt="Assassin's Creed">
+                        <p>Assassin's Creed</p>
+                    </a>
+                </div>
+                <div class="game">
+                    <a href="{% url 'god-of-war' %}">
+                        <img src="{% static 'images/god-of-war.jpg' %}" alt="God of War">
+                    </a>
+                    <p>God of War Ragnarök: Valhalla</p>
+                </div>                
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Steam UI Clone. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

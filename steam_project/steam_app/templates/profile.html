@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="{% static 'images/steam-logo.png' %}" alt="Steam Logo" width="150">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'index' %}">Store</a></li>
+                    <li><a href="{% url 'community' %}" class="btn">Community</a></li>
+                    <li><a href="{% url 'about' %}" class="btn">About</a></li>
+                    <li><a href="{% url 'profile' %}" class="btn">Profile</a></li>
+                </ul>
+            </nav>
+            <div class="login-btn">
+                <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="profile-container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <img src="{% static 'images/profile.jpg' %}" alt="Profile Picture" class="profile-pic">
+            <div>
+                <div class="profile-username">Animewikia</div>
+                <div>Level 15</div>
+            </div>
+        </div>
+
+
+        <!-- Profile Bio -->
+        <div class="mt-3">
+            <h5>About Me</h5>
+            <p>Welcome to my profile! I love gaming and exploring new adventures.</p>
+        </div>
+
+
+        <!-- Badges Section -->
+        <div class="mt-3">
+            <h5>Badges</h5>
+            <span class="badge">Achievement Hunter</span>
+            <span class="badge">100+ Games</span>
+            <span class="badge">Collector</span>
+        </div>
+
+
+        <!-- Game Stats -->
+        <div class="stats">
+            <h5>Game Stats</h5>
+            <p>Hours Played: <b>1,250 hrs</b></p>
+            <p>Favorite Game: <b>Elden Ring</b></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Steam UI Clone. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
